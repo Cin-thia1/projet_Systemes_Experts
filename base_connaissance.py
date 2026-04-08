@@ -85,4 +85,51 @@ REGLES = [
         "conclusion": "probleme_imprimante",
         "solution": "Réinstaller les pilotes de l'imprimante"
     },
+    # --- SURCHAUFFE ---
+    {
+        "id": "R14",
+        "conditions": ["pc_eteint_brusquement", "temperature_elevee"],
+        "conclusion": "surchauffe_generale",
+        "solution": "Vérifier la ventilation du boîtier et nettoyer les filtres"
+    },
+
+    # --- BIOS ---
+    {
+        "id": "R15",
+        "conditions": ["pc_ne_demarre_pas", "bip_sonore"],
+        "conclusion": "erreur_bios",
+        "solution": "Consulter le manuel de la carte mère pour décoder les bips"
+    },
+
+    # --- BATTERIE (laptop) ---
+    {
+        "id": "R16",
+        "conditions": ["laptop", "batterie_ne_charge_pas"],
+        "conclusion": "probleme_batterie",
+        "solution": "Remplacer la batterie ou vérifier le chargeur"
+    },
+
+    # --- ECRAN ---
+    {
+        "id": "R17",
+        "conditions": ["ecran_clignote", "pilotes_anciens"],
+        "conclusion": "pilotes_graphiques_obsoletes",
+        "solution": "Mettre à jour les pilotes de la carte graphique"
+    },
+
+    # --- USB ---
+    {
+        "id": "R18",
+        "conditions": ["peripherique_usb_non_detecte"],
+        "conclusion": "probleme_port_usb",
+        "solution": "Tester un autre port USB ou réinstaller les pilotes USB"
+    },
+
+    # --- SON ---
+    {
+        "id": "R19",
+        "conditions": ["pas_de_son", "pilotes_audio_absents"],
+        "conclusion": "probleme_audio",
+        "solution": "Réinstaller les pilotes audio depuis le site du fabricant"
+    },
 ]
