@@ -1,7 +1,8 @@
-# main.py - Point d'entrée du système expert DiagnoPC
+# main.py - Point d'entrée du système expert SEMI
+# Système Expert de Maintenance Informatique
 
-from interface import ExpertChatbot
+from gui import SEMI
 
 if __name__ == "__main__":
-    app = ExpertChatbot()
+    app = SEMI()
     app.mainloop()
